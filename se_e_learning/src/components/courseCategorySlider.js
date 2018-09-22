@@ -34,7 +34,15 @@ class CourseCategorySlider extends React.Component {
                 <a href="#">
                   <h4>{data.categoryName}</h4>
                 </a>
-                <p style={{ textAlign: "left", paddingLeft:'10px' }}>{data.description}</p>
+                <p
+                  style={{
+                    textAlign: "left",
+                    paddingLeft: "10px",
+                    color: "#777"
+                  }}
+                >
+                  {data.description}
+                </p>
               </div>
             </div>
           ))}

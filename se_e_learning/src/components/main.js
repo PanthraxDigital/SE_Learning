@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import _courseCategory from "../content/courseCategory.json";
 import CourseCategorySlider from "./courseCategorySlider";
+import Footer from "./footer";
 
 class Main extends React.Component {
   constructor(props) {
@@ -47,7 +48,6 @@ class Main extends React.Component {
             </div>
           </div>
         </section>
-
         <section className="feature-area">
           <div className="container">
             <div className="row">
@@ -96,7 +96,6 @@ class Main extends React.Component {
             </div>
           </div>
         </section>
-
         <section className="popular-course-area">
           <div className="container">
             <div
@@ -112,12 +111,26 @@ class Main extends React.Component {
             </div>
           </div>
         </section>
-
         <section className="popular-course-area">
           <div className="container">
             <CourseCategorySlider courseCategories={_courseCategory} />
           </div>
         </section>
+        <section class="cta-two-area" style={{ marginTop: "200px" }}>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 cta-left">
+                <h1>Not Yet Satisfied with our Trend?</h1>
+              </div>
+              <div class="col-lg-4 cta-right">
+                <a class="primary-btn wh" href="#">
+                  view our blog
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <Footer />
       </React.Fragment>
     );
   }
