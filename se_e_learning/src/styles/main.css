@@ -2215,9 +2215,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   margin: 20px 0px;
+  color: black;
+  text-align: left;
+  padding-left: 10px
 }
 .single-popular-carusel .details h4:hover {
-  color: #f7631b !important;
+  /* color: #f7631b !important; */
 }
 @media (max-width: 576px) {
   .single-popular-carusel {
@@ -2225,7 +2228,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 .single-popular-carusel:hover .thumb img {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 .search-course-area {
   background: url(../img/s-bg.jpg) center;

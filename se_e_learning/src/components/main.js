@@ -1,7 +1,27 @@
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import _courseCategory from "../content/courseCategory.json";
+import CourseCategorySlider from "./courseCategorySlider";
 
 class Main extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      courseCategory: _courseCategory
+    };
+  }
+
   render() {
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1
+    };
+
     return (
       <React.Fragment>
         <section className="banner-area relative" id="home">
@@ -77,9 +97,12 @@ class Main extends React.Component {
           </div>
         </section>
 
-        <section className="popular-course-area section-gap">
+        <section className="popular-course-area">
           <div className="container">
-            <div className="row d-flex justify-content-center">
+            <div
+              className="row d-flex justify-content-center"
+              style={{ marginTop: "100px" }}
+            >
               <div className="menu-content pb-70 col-lg-8">
                 <div className="title text-center">
                   <h1 className="mb-10">Popular Courses we offer</h1>
@@ -87,214 +110,12 @@ class Main extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="row">
-              <div className="active-popular-carusel">
-                <div className="single-popular-carusel">
-                  <div className="thumb-wrap relative">
-                    <div className="thumb relative">
-                      <div className="overlay overlay-bg" />
-                      <img
-                        className="img-fluid"
-                        src={require("../img/p1.jpg")}
-                        alt=""
-                      />
-                    </div>
-                    <div className="meta d-flex justify-content-between">
-                      <p>
-                        <span className="lnr lnr-users" /> 355{" "}
-                        <span className="lnr lnr-bubble" />
-                        35
-                      </p>
-                      <h4>$150</h4>
-                    </div>
-                  </div>
-                  <div className="details">
-                    <a href="#">
-                      <h4>Learn Designing</h4>
-                    </a>
-                    <p>
-                      When television was young, there was a hugely popular show
-                      based on the still popular fictional characte
-                    </p>
-                  </div>
-                </div>
-                <div className="single-popular-carusel">
-                  <div className="thumb-wrap relative">
-                    <div className="thumb relative">
-                      <div className="overlay overlay-bg" />
-                      <img className="img-fluid" src="img/p2.jpg" alt="" />
-                    </div>
-                    <div className="meta d-flex justify-content-between">
-                      <p>
-                        <span className="lnr lnr-users" /> 355{" "}
-                        <span className="lnr lnr-bubble" />
-                        35
-                      </p>
-                      <h4>$150</h4>
-                    </div>
-                  </div>
-                  <div className="details">
-                    <a href="#">
-                      <h4>Learn React js beginners</h4>
-                    </a>
-                    <p>
-                      When television was young, there was a hugely popular show
-                      based on the still popular fictional characte
-                    </p>
-                  </div>
-                </div>
-                <div className="single-popular-carusel">
-                  <div className="thumb-wrap relative">
-                    <div className="thumb relative">
-                      <div className="overlay overlay-bg" />
-                      <img className="img-fluid" src="img/p3.jpg" alt="" />
-                    </div>
-                    <div className="meta d-flex justify-content-between">
-                      <p>
-                        <span className="lnr lnr-users" /> 355{" "}
-                        <span className="lnr lnr-bubble" />
-                        35
-                      </p>
-                      <h4>$150</h4>
-                    </div>
-                  </div>
-                  <div className="details">
-                    <a href="#">
-                      <h4>Learn Photography</h4>
-                    </a>
-                    <p>
-                      When television was young, there was a hugely popular show
-                      based on the still popular fictional characte
-                    </p>
-                  </div>
-                </div>
-                <div className="single-popular-carusel">
-                  <div className="thumb-wrap relative">
-                    <div className="thumb relative">
-                      <div className="overlay overlay-bg" />
-                      <img className="img-fluid" src="img/p4.jpg" alt="" />
-                    </div>
-                    <div className="meta d-flex justify-content-between">
-                      <p>
-                        <span className="lnr lnr-users" /> 355{" "}
-                        <span className="lnr lnr-bubble" />
-                        35
-                      </p>
-                      <h4>$150</h4>
-                    </div>
-                  </div>
-                  <div className="details">
-                    <a href="#">
-                      <h4>Learn Surveying</h4>
-                    </a>
-                    <p>
-                      When television was young, there was a hugely popular show
-                      based on the still popular fictional characte
-                    </p>
-                  </div>
-                </div>
-                <div className="single-popular-carusel">
-                  <div className="thumb-wrap relative">
-                    <div className="thumb relative">
-                      <div className="overlay overlay-bg" />
-                      <img className="img-fluid" src="img/p1.jpg" alt="" />
-                    </div>
-                    <div className="meta d-flex justify-content-between">
-                      <p>
-                        <span className="lnr lnr-users" /> 355{" "}
-                        <span className="lnr lnr-bubble" />
-                        35
-                      </p>
-                      <h4>$150</h4>
-                    </div>
-                  </div>
-                  <div className="details">
-                    <a href="#">
-                      <h4>Learn Designing</h4>
-                    </a>
-                    <p>
-                      When television was young, there was a hugely popular show
-                      based on the still popular fictional characte
-                    </p>
-                  </div>
-                </div>
-                <div className="single-popular-carusel">
-                  <div className="thumb-wrap relative">
-                    <div className="thumb relative">
-                      <div className="overlay overlay-bg" />
-                      <img className="img-fluid" src="img/p2.jpg" alt="" />
-                    </div>
-                    <div className="meta d-flex justify-content-between">
-                      <p>
-                        <span className="lnr lnr-users" /> 355{" "}
-                        <span className="lnr lnr-bubble" />
-                        35
-                      </p>
-                      <h4>$150</h4>
-                    </div>
-                  </div>
-                  <div className="details">
-                    <a href="#">
-                      <h4>Learn React js beginners</h4>
-                    </a>
-                    <p>
-                      When television was young, there was a hugely popular show
-                      based on the still popular fictional characte
-                    </p>
-                  </div>
-                </div>
-                <div className="single-popular-carusel">
-                  <div className="thumb-wrap relative">
-                    <div className="thumb relative">
-                      <div className="overlay overlay-bg" />
-                      <img className="img-fluid" src="img/p3.jpg" alt="" />
-                    </div>
-                    <div className="meta d-flex justify-content-between">
-                      <p>
-                        <span className="lnr lnr-users" /> 355{" "}
-                        <span className="lnr lnr-bubble" />
-                        35
-                      </p>
-                      <h4>$150</h4>
-                    </div>
-                  </div>
-                  <div className="details">
-                    <a href="#">
-                      <h4>Learn Photography</h4>
-                    </a>
-                    <p>
-                      When television was young, there was a hugely popular show
-                      based on the still popular fictional characte
-                    </p>
-                  </div>
-                </div>
-                <div className="single-popular-carusel">
-                  <div className="thumb-wrap relative">
-                    <div className="thumb relative">
-                      <div className="overlay overlay-bg" />
-                      <img className="img-fluid" src="img/p4.jpg" alt="" />
-                    </div>
-                    <div className="meta d-flex justify-content-between">
-                      <p>
-                        <span className="lnr lnr-users" /> 355{" "}
-                        <span className="lnr lnr-bubble" />
-                        35
-                      </p>
-                      <h4>$150</h4>
-                    </div>
-                  </div>
-                  <div className="details">
-                    <a href="#">
-                      <h4>Learn Surveying</h4>
-                    </a>
-                    <p>
-                      When television was young, there was a hugely popular show
-                      based on the still popular fictional characte
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          </div>
+        </section>
+
+        <section className="popular-course-area">
+          <div className="container">
+            <CourseCategorySlider courseCategories={_courseCategory} />
           </div>
         </section>
       </React.Fragment>

@@ -3,6 +3,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/header";
 import Main from "./components/main";
+import "./styles/main.css";
+import "./styles/bootstrap.css";
 
 class App extends Component {
   render() {

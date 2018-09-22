@@ -1,8 +1,4 @@
 import React from "react";
-import "../styles/main.css";
-import "../styles/bootstrap.css";
-import "../styles/bootstrap-grid.css";
-import "../styles/bootstrap-reboot.css";
 
 class Header extends React.Component {
   constructor(props) {
@@ -74,7 +70,8 @@ class Header extends React.Component {
           <div className="row align-items-center justify-content-between d-flex">
             <div id="logo">
               <a href="index.html">
-                <img src="img/logo.png" alt="" title="" />
+                {/* <img src="img/logo.png" alt="" title="" /> */}
+                <span>Squadl eLearning</span>
               </a>
             </div>
             <nav id="nav-menu-container">

@@ -1,0 +1,44 @@
+[
+  {
+    "courseCategoryId": "1",
+    "categoryName": "Maths Maniac",
+    "description": "This course describe the fundamentals of the Maths. So that students can learn easily",
+    "cost": "Free",
+    "imageUrl ": ""
+  },
+  {
+    "courseCategoryId": "2",
+    "categoryName": "Maths Maniac",
+    "description": "This course describe the fundamentals of the Maths. So that students can learn easily",
+    "cost": "Free",
+    "imageUrl ": ""
+  },
+  {
+    "courseCategoryId": "3",
+    "categoryName": "Maths Maniac",
+    "description": "This course describe the fundamentals of the Maths. So that students can learn easily",
+    "cost": "Free",
+    "imageUrl ": ""
+  },
+  {
+    "courseCategoryId": "4",
+    "categoryName": "Maths Maniac",
+    "description": "This course describe the fundamentals of the Maths. So that students can learn easily",
+    "cost": "Free",
+    "imageUrl ": ""
+  },
+  {
+    "courseCategoryId": "5",
+    "categoryName": "Maths Maniac",
+    "description": "This course describe the fundamentals of the Maths. So that students can learn easily",
+    "cost": "Free",
+    "imageUrl ": ""
+  },
+  {
+    "courseCategoryId": "6",
+    "categoryName": "Maths Maniac",
+    "description": "This course describe the fundamentals of the Maths. So that students can learn easily",
+    "cost": "Free",
+    "imageUrl ": ""
+  }
+]
