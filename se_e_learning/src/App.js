@@ -4,7 +4,7 @@ import Home from "./components/home";
 import "./styles/main.css";
 import "./styles/bootstrap.css";
 import { Route, Switch } from "react-router-dom";
-import SubCategoryPage from "./components/subCategoryPage";
+import SubCategoryPage from "./components/topicPage";
 import Header from "./components/header";
 
 class App extends Component {
