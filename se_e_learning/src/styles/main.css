@@ -2217,7 +2217,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 20px 0px;
   color: black;
   text-align: left;
-  padding-left: 10px
+  padding-left: 10px;
 }
 .single-popular-carusel .details h4:hover {
   /* color: #f7631b !important; */
@@ -4162,4 +4162,51 @@ dl.toggle.time-line:before {
 }
 .footer-bottom .footer-social a:hover {
   background-color: #f7631b;
+}
+
+/* Collapsible */
+
+.Collapsible {
+  background-color: pink;
+  width: 250px;
+}
+
+.Collapsible__contentInner {
+  padding: 10px;
+  border: 1px solid lightGrey;
+  border-top: 0;
+}
+.Collapsible__contentInner p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.Collapsible__trigger {
+  display: block;
+  font-weight: 400;
+  text-decoration: none;
+  color: grey;
+  position: relative;
+  border: 1px solid white;
+  padding: 10px;
+  background: rgb(20, 83, 107);
+  color: white;
+  width: 250px;
+}
+
+.CustomTriggerCSS {
+  background-color: lightcoral;
+  transition: background-color 200ms ease;
+}
+
+.CustomTriggerCSS--open {
+  background-color: darkslateblue;
+}
+
+.Collapsible__custom-sibling {
+  padding: 5px;
+  font-size: 12px;
+  background-color: #cbb700;
+  color: black;
 }

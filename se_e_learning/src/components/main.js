@@ -116,14 +116,14 @@ class Main extends React.Component {
             <CourseCategorySlider courseCategories={_courseCategory} />
           </div>
         </section>
-        <section class="cta-two-area" style={{ marginTop: "200px" }}>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 cta-left">
+        <section className="cta-two-area" style={{ marginTop: "200px" }}>
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-8 cta-left">
                 <h1>Not Yet Satisfied with our Trend?</h1>
               </div>
-              <div class="col-lg-4 cta-right">
-                <a class="primary-btn wh" href="#">
+              <div className="col-lg-4 cta-right">
+                <a className="primary-btn wh" href="#">
                   view our blog
                 </a>
               </div>

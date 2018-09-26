@@ -1,7 +1,7 @@
 [
   {
-    "courseCategoryId": "1",
-    "categoryName": "Learn Maths",
+    "courseCategoryId": "1.1",
+    "categoryName": "Basic Maths",
     "description": "This course describe the fundamentals of the Maths. So that students can learn easily",
     "cost": "Free",
     "link": "/learnMaths",
@@ -9,7 +9,7 @@
   },
   {
     "courseCategoryId": "2",
-    "categoryName": "Learn Science",
+    "categoryName": "Maths by Class",
     "description": "This course describe the fundamentals of the Maths. So that students can learn easily",
     "cost": "Free",
     "link": "/learnScience",
@@ -17,7 +17,7 @@
   },
   {
     "courseCategoryId": "3",
-    "categoryName": "Learn Grammar",
+    "categoryName": "Maths in Hindi",
     "description": "This course describe the fundamentals of the Maths. So that students can learn easily",
     "cost": "Free",
     "link": "/learnGrammar",

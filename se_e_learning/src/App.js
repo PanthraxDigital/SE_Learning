@@ -1,17 +1,21 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import Header from "./components/header";
-import Main from "./components/main";
+import Home from "./components/home";
 import "./styles/main.css";
 import "./styles/bootstrap.css";
+import { Route, Switch } from "react-router-dom";
+import SubCategoryPage from "./components/subCategoryPage";
+import Header from "./components/header";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Header />
-        <Main />
+        <Switch>
+          <Route path="/:category" component={SubCategoryPage} />
+          <Route exact path="/" component={Home} />
+        </Switch>
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Header extends React.Component {
   constructor(props) {
@@ -54,13 +55,13 @@ class Header extends React.Component {
                 </ul>
               </div>
               <div className="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
-                <a href="tel:+953 012 3654 896">
+                <a href="tel:+91 7738416181">
                   <span className="lnr lnr-phone-handset" />{" "}
-                  <span className="text">+953 012 3654 896</span>
+                  <span className="text">+91 7738416181</span>
                 </a>
-                <a href="mailto:support@colorlib.com">
+                <a href="mailto:support@squadl.com">
                   <span className="lnr lnr-envelope" />{" "}
-                  <span className="text">support@colorlib.com</span>
+                  <span className="text">support@squadl.com</span>
                 </a>
               </div>
             </div>
@@ -69,15 +70,15 @@ class Header extends React.Component {
         <div className="container main-menu">
           <div className="row align-items-center justify-content-between d-flex">
             <div id="logo">
-              <a href="index.html">
+              <Link to="/">
                 {/* <img src="img/logo.png" alt="" title="" /> */}
                 <span>Squadl eLearning</span>
-              </a>
+              </Link>
             </div>
             <nav id="nav-menu-container">
               <ul className="nav-menu">
                 <li>
-                  <a href="index.html">Home</a>
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
                   <a href="about.html">About</a>

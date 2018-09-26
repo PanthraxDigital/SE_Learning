@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import { Link } from "react-router-dom";
 
 class CourseCategorySlider extends React.Component {
   render() {
@@ -10,7 +11,7 @@ class CourseCategorySlider extends React.Component {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 4,
+      slidesToShow: 3,
       slidesToScroll: 1
     };
     return (
@@ -31,9 +32,9 @@ class CourseCategorySlider extends React.Component {
               </div>
 
               <div className="details">
-                <a href="#">
+                <Link to={data.link}>
                   <h4>{data.categoryName}</h4>
-                </a>
+                </Link>
                 <p
                   style={{
                     textAlign: "left",
