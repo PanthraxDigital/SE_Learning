@@ -7,8 +7,12 @@ class Contents extends React.Component {
     this.state = {
       contentList: []
     };
+    this.playContentUrlRef = React.createRef();
     this.contentUrlRef = React.createRef();
+    this.playContent = this.playContent.bind(this);
   }
+
+  playContent(e) {}
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.contentUrl !== this.props.contentUrl) {
@@ -32,11 +36,21 @@ class Contents extends React.Component {
         <div id="main" className="pure-u-1">
           {this.state.contentList.map(data => {
             return (
-              <div className="email-content" key={data.key}>
+              <div
+                className="email-content"
+                key={data.key}
+                onClick={this.playContent}
+                ref={this.playContentUrlRef}
+              >
                 <div className="email-content-body">
                   <h3>{data.title}</h3>
                   <p>{data.description}</p>
                 </div>
+                <iframe
+                  width="420"
+                  height="345"
+                  src="https://www.youtube.com/embed/tgbNymZ7vqY"
+                />
               </div>
             );
           })}
