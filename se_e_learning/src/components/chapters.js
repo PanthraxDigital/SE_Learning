@@ -1,10 +1,12 @@
 import React from "react";
 import axios from "axios";
 
+// 0.The url will contain Subject & Class information on basis of which we can get the Chapters
+// 1. Fetch Chapter on basis of Subject ( Sub category ) + Class Selected ( Maths in Hindi for 10 std)
 class Chapters extends React.Component {
   constructor(props) {
     super(props);
-    this.url = "http://www.khanacademy.org/api/v1/topic/in-in-grade-10-ncert"; // api/subcategory/course
+    this.url = props.chaptersUrl; // api/subcategory/course
     this.state = {
       chapterList: []
     };
@@ -13,15 +15,13 @@ class Chapters extends React.Component {
   }
 
   getTopicByChapter(e) {
-    //alert(e.target.getAttribute("data"));
-    alert(e.target.getAttribute("data"));
+    this.props.topicUrlCallback(e.target.getAttribute("data"));
   }
 
   componentDidMount() {
     axios
       .get(this.url)
       .then(response => {
-        console.log("response " + response.data.children);
         this.setState({
           chapterList: response.data.children
         });
@@ -31,9 +31,7 @@ class Chapters extends React.Component {
       });
   }
   render() {
-    console.log(this.state.chapterList);
-
-    if (this.state.chapterList != []) {
+    if (this.state.chapterList !== []) {
       return (
         <div id="nav" className="pure-u">
           <a href="#" className="nav-menu-button">
@@ -47,7 +45,7 @@ class Chapters extends React.Component {
                   return (
                     <li className="pure-menu-item" key={data.key}>
                       <span
-                        data={data.url}
+                        data={data.node_slug}
                         className="pure-menu-link"
                         ref={this.topicUrl}
                         onClick={this.getTopicByChapter}

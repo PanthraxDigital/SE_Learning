@@ -134,9 +134,10 @@ a {
 
 /* Email Item Styles */
 .email-item {
-  padding: 0.9em 1em;
+  padding: 0.5em 1em;
   border-bottom: 1px solid #ddd;
   border-left: 6px solid transparent;
+  cursor: pointer;
 }
 .email-avatar {
   border-radius: 3px;
@@ -145,6 +146,13 @@ a {
 .email-name,
 .email-subject {
   margin: 0;
+  color: black;
+  overflow: hidden;
+  white-space: normal;
+  width: 200px;
+  padding: 0.5em 0;
+  font-size: 1.1em;
+  text-align: left;
 }
 .email-name {
   text-transform: uppercase;
@@ -273,9 +281,10 @@ a {
   /* This will take up the entire height, and be a little thinner */
   #list {
     margin-left: -300px;
-    width: 300px;
+    width: 250px;
     height: 100%;
     border-right: 1px solid #ddd;
+    cursor: pointer;
   }
 
   /* This will now take up it's own column, so don't need position: fixed; */
@@ -283,5 +292,14 @@ a {
     position: static;
     margin: 0;
     padding: 0;
+    text-align: left;
   }
+}
+
+.topic {
+  color: black;
+  margin-left: 0.5em;
+  overflow: hidden;
+  white-space: normal;
+  width: 200px;
 }

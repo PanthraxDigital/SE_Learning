@@ -2,55 +2,49 @@ import React from "react";
 import axios from "axios";
 
 class Contents extends React.Component {
-  render() {
-    return (
-      <div id="main" className="pure-u-1">
-        <div className="email-content">
-          <div className="email-content-header pure-g">
-            <div className="pure-u-1-1">
-              <h1 className="email-content-title">Hello from Toronto</h1>
-            </div>
-          </div>
+  constructor(props) {
+    super(props);
+    this.state = {
+      contentList: []
+    };
+    this.contentUrlRef = React.createRef();
+  }
 
-          <div className="email-content-body">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit
-              essecillum dolore eu fugiat nulla pariatur. Excepteur sint
-              occaecat cupidatat non proident, sunt in culpa qui officia
-              deserunt mollit anim id est laborum.
-            </p>
-            <p>
-              Aliquam ac feugiat dolor. Proin mattis massa sit amet enim iaculis
-              tincidunt. Mauris tempor mi vitae sem aliquet pharetra. Fusce in
-              dui purus, nec malesuada mauris. Curabitur ornare arcu quis mi
-              blandit laoreet. Vivamus imperdiet fermentum mauris, ac posuere
-              urna tempor at. Duis pellentesque justo ac sapien aliquet egestas.
-              Morbi enim mi, porta eget ullamcorper at, pharetra id lorem.
-            </p>
-            <p>
-              Donec sagittis dolor ut quam pharetra pretium varius in nibh.
-              Suspendisse potenti. Donec imperdiet, velit vel adipiscing
-              bibendum, leo eros tristique augue, eu rutrum lacus sapien vel
-              quam. Nam orci arcu, luctus quis vestibulum ut, ullamcorper ut
-              enim. Morbi semper erat quis orci aliquet condimentum. Nam
-              interdum mauris sed massa dignissim rhoncus.
-            </p>
-            <p>
-              Regards,
-              <br />
-              Tilo
-            </p>
-          </div>
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.contentUrl !== this.props.contentUrl) {
+      axios
+        .get(`http://www.khanacademy.org/api/v1/topic/${nextProps.contentUrl}`)
+        .then(response => {
+          console.log("response " + JSON.stringify(response.data.children));
+          this.setState({
+            contentList: response.data.children
+          });
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
+  }
+
+  render() {
+    if (this.state.contentList.length > 0) {
+      return (
+        <div id="main" className="pure-u-1">
+          {this.state.contentList.map(data => {
+            return (
+              <div className="email-content" key={data.key}>
+                <div className="email-content-body">
+                  <h3>{data.title}</h3>
+                  <p>{data.description}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
-      </div>
-    );
+      );
+    } else {
+      return null;
+    }
   }
 }
-
 export default Contents;

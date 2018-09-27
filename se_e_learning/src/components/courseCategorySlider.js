@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 class CourseCategorySlider extends React.Component {
   render() {
-    console.log(JSON.stringify(this.props.courseCategories));
     const settings = {
       dots: true,
       infinite: true,
