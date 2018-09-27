@@ -1,8 +1,31 @@
 import React from "react";
-import Collapsible from "react-collapsible";
 import "../styles/topicPage.css";
+import axios from "axios";
+
+// 0.The url will contain Subject & Class information on basis of which we can get the Chapters
+// 1. Fetch Chapter on basis of Subject ( Sub category ) + Class Selected ( Maths in Hindi for 10 std)
+// 2. Fetch Topic on basis of selected chapter
+// 3. Fetch video list on basis of selected Topic
+// 4. Excercise on basis of topic
 
 class TopicPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.url = "http://www.khanacademy.org/api/v1/topic/math"; // api/subcategory/course
+    
+  }
+
+  componentDidMount() {
+    axios
+      .get(this.url)
+      .then(function(response) {
+        console.log(response);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -30,23 +53,23 @@ class TopicPage extends React.Component {
                 </div>
               </div>
             </div>
-            <div id="list" class="pure-u-1">
-              <div class="email-item email-item-selected pure-g">
-                <div class="pure-u-3-4">
-                  <h4 class="email-subject">Hello from Toronto</h4>
+            <div id="list" className="pure-u-1">
+              <div className="email-item email-item-selected pure-g">
+                <div className="pure-u-3-4">
+                  <h4 className="email-subject">Hello from Toronto</h4>
                 </div>
               </div>
             </div>
 
-            <div id="main" class="pure-u-1">
-              <div class="email-content">
-                <div class="email-content-header pure-g">
-                  <div class="pure-u-1-1">
-                    <h1 class="email-content-title">Hello from Toronto</h1>
+            <div id="main" className="pure-u-1">
+              <div className="email-content">
+                <div className="email-content-header pure-g">
+                  <div className="pure-u-1-1">
+                    <h1 className="email-content-title">Hello from Toronto</h1>
                   </div>
                 </div>
 
-                <div class="email-content-body">
+                <div className="email-content-body">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                     sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -93,4 +116,3 @@ class TopicPage extends React.Component {
 }
 
 export default TopicPage;
-
