@@ -172,9 +172,14 @@ a {
 
 /* Email Content Styles */
 .email-content-header,
-.email-content-body,
 .email-content-footer {
   padding: 1em 1em;
+}
+
+.email-content-body {
+  padding: 1em 1em;
+  cursor: pointer;
+  border-bottom: 1px solid gray;
 }
 .email-content-header {
   border-bottom: 1px solid #ddd;
