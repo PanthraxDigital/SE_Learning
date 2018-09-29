@@ -6,6 +6,7 @@ import "./styles/bootstrap.css";
 import { Route, Switch } from "react-router-dom";
 import SubCategoryPage from "./components/topicPage";
 import Header from "./components/header";
+import Content from "./components/contents";
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Switch>
+          <Route path="/topic/:content" component={Content} />
           <Route path="/:category" component={SubCategoryPage} />
           <Route exact path="/" component={Home} />
         </Switch>

@@ -13,6 +13,9 @@ class Contents extends React.Component {
     this.contentUrlRef = React.createRef();
     this.playContent = this.playContent.bind(this);
     this.closePopup = this.closePopup.bind(this);
+    this.navigateBack = this.navigateBack.bind(this);
+    let path = this.props.location.pathname;
+    this.pathValue = path.substr(path.lastIndexOf("/"), path.length);
   }
 
   playContent(e) {
@@ -28,21 +31,22 @@ class Contents extends React.Component {
       showPopup: false
     });
   }
+  navigateBack(e) {
+    this.props.history.goBack();
+  }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.contentUrl !== this.props.contentUrl) {
-      axios
-        .get(`http://www.khanacademy.org/api/v1/topic/${nextProps.contentUrl}`)
-        .then(response => {
-          console.log("content response " + JSON.stringify(response.data));
-          this.setState({
-            contentList: response.data.children
-          });
-        })
-        .catch(error => {
-          console.log(error);
+  componentDidMount() {
+    axios
+      .get(`http://www.khanacademy.org/api/v1/topic${this.pathValue}`)
+      .then(response => {
+        console.log("content response " + JSON.stringify(response.data));
+        this.setState({
+          contentList: response.data.children
         });
-    }
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   render() {
@@ -60,33 +64,43 @@ class Contents extends React.Component {
 
     if (this.state.contentList.length > 0) {
       return (
-        <div id="main" className="pure-u-1">
-          <ul>
-            {this.state.contentList.map((data, index) => {
-              console.log("value " + data.node_slug.indexOf("v/"));
-              if (data.node_slug.indexOf("v/") != -1) {
-                return (
-                  <li
-                    node_slug={data.node_slug.substr(2, data.node_slug.length)}
-                    key={index}
-                    onClick={this.playContent}
-                    ref={this.contentUrlRef}
-                  >
-                    <div className="email-content">
-                      <div className="email-content-body">
-                        <h3>{data.title}</h3>
-                        <p>{data.description}</p>
+        <React.Fragment>
+          <div id="main">
+            <div>
+              <button className="pure-button" onClick={this.navigateBack}>
+                Go Back
+              </button>
+            </div>
+            <ul>
+              {this.state.contentList.map((data, index) => {
+                console.log("value " + data.node_slug.indexOf("v/"));
+                if (data.node_slug.indexOf("v/") != -1) {
+                  return (
+                    <li
+                      node_slug={data.node_slug.substr(
+                        2,
+                        data.node_slug.length
+                      )}
+                      key={index}
+                      onClick={this.playContent}
+                      ref={this.contentUrlRef}
+                    >
+                      <div className="email-content">
+                        <div className="email-content-body">
+                          <h3>{data.title}</h3>
+                          <p>{data.description}</p>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                );
-              } else {
-                return null;
-              }
-            })}
-            {showContentInPopup}
-          </ul>
-        </div>
+                    </li>
+                  );
+                } else {
+                  return null;
+                }
+              })}
+              {showContentInPopup}
+            </ul>
+          </div>
+        </React.Fragment>
       );
     } else {
       return null;

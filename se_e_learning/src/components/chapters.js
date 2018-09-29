@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Collapsible from "react-collapsible";
-import Topics from "./topics";
+import { Link } from "react-router-dom";
 
 class Chapters extends React.Component {
   constructor(props) {
@@ -42,11 +42,18 @@ class Chapters extends React.Component {
           case 2:
             this.topicVal[index].innerRef.innerHTML = "";
             response.data.children.map((data3, ctr) => {
-              this.topicVal[
-                index
-              ].innerRef.innerHTML += `<div class=topicInfo>${ctr + 1}) ${
+              // this.topicVal[index].innerRef.innerHTML += `<div class=topicInfo>
+              // <a href="/topic/${data3.node_slug}"</a> ${ctr + 1}) ${
+              //   data3.title
+              // } </div>`;
+
+              let innerContent = `<a href="/topic/${data3.node_slug}">${
                 data3.title
-              } </div>`;
+              }</a>`;
+
+              this.topicVal[index].innerRef.innerHTML += `<div class=topicInfo>
+              ${innerContent}
+              </div>`;
             });
 
             break;

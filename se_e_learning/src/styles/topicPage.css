@@ -295,10 +295,9 @@ a {
   /* This will now take up it's own column, so don't need position: fixed; */
   #main {
     position: static;
-    margin: 0;
     padding: 0;
     text-align: left;
-    margin-left: -20px;
+    margin : 100px 50px 20px 50px;
   }
 }
 
