@@ -41,10 +41,10 @@ class Chapters extends React.Component {
             break;
           case 2:
             this.topicVal[index].innerRef.innerHTML = "";
-            response.data.children.map(data3 => {
+            response.data.children.map((data3, ctr) => {
               this.topicVal[
                 index
-              ].innerRef.innerHTML += `<div class=topicInfo>${
+              ].innerRef.innerHTML += `<div class=topicInfo>${ctr + 1}) ${
                 data3.title
               } </div>`;
             });

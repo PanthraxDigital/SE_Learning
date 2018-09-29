@@ -4172,7 +4172,6 @@ dl.toggle.time-line:before {
   border-bottom: 1px solid lightGrey;
   padding: 0px;
   cursor: pointer;
-  
 }
 
 .Collapsible__contentInner {
@@ -4192,11 +4191,10 @@ dl.toggle.time-line:before {
   letter-spacing: 1px;
   position: relative;
   padding: 10px;
-  color: white;
   text-align: left;
   font-size: 24px;
-  background: #f7631b;
-  opacity: 0.9;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #f7631b;
 }
 
 .CustomTriggerCSS {
@@ -4237,9 +4235,10 @@ dl.toggle.time-line:before {
   background: white;
 }
 
-.topicInfo{
+.topicInfo {
   text-align: left;
   padding: 5px;
   font-size: 18px;
   cursor: pointer;
+  
 }
