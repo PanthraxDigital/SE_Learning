@@ -5,42 +5,42 @@
     "Courses": [
       {
         "CourseId": "1.1",
-        "Name": "Class 5",
+        "Name": "5th std",
         "Link": "/in-fifth-grade-math"
       },
       {
         "CourseId": "1.2",
-        "Name": "Class 6",
+        "Name": "6th std",
         "Link": "/in-in-class-6th-math-cbse"
       },
       {
         "CourseId": "1.3",
-        "Name": "Class 7",
+        "Name": "7th std",
         "Link": "/in-in-class-7th-math-cbse"
       },
       {
         "CourseId": "1.4",
-        "Name": "Class 8",
+        "Name": "8th std",
         "Link": "/in-in-class-8th-math-cbse"
       },
       {
         "CourseId": "1.5",
-        "Name": "Class 9",
+        "Name": "9 std",
         "Link": "/in-in-grade-9-ncert"
       },
       {
         "CourseId": "1.6",
-        "Name": "Class 10",
+        "Name": "10 std",
         "Link": "/in-in-grade-10-ncert"
       },
       {
         "CourseId": "1.7",
-        "Name": "Class 11",
+        "Name": "11th std",
         "Link": "/in-in-grade-11-ncert"
       },
       {
         "CourseId": "1.8",
-        "Name": "Class 12",
+        "Name": "12th std",
         "Link": "/in-in-grade-12-ncert"
       }
     ]
@@ -51,34 +51,34 @@
     "Courses": [
       {
         "CourseId": "2.1",
-        "Name": "Class 7",
+        "Name": "7th std",
         "Link": "/in-in-class-7th-math-cbse-hindi"
       },
       {
         "CourseId": "2.2",
-        "Name": "Class 8",
+        "Name": "8th std",
         "Link": "/in-in-class-8-math-india-hindi"
       },
       {
         "CourseId": "2.3",
-        "Name": "Class 9",
+        "Name": "9th std",
         "Link": "/in-in-class-9-math-india-hindi"
       },
       {
         "CourseId": "2.4",
-        "Name": "Class 10",
+        "Name": "10th std",
         "Link": "/in-in-class-10-math-cbse-hindi"
       },
       {
         "CourseId": "2.5",
-        "Name": "Class 11",
+        "Name": "11 std",
         "Link": "/in-in-class-11-math-cbse-hindi"
       }
     ]
   },
   {
     "CategoryId": "3",
-    "Category": "General Maths",
+    "Category": "Conceptual Maths",
     "Courses": [
       {
         "CourseId": "3.1",

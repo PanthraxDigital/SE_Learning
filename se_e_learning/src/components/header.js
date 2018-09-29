@@ -29,11 +29,8 @@ class Header extends React.Component {
                 <li>
                   <a href="about.html">About</a>
                 </li>
-                <li>
-                  <a href="courses.html">Courses</a>
-                </li>
                 <li className="menu-has-children">
-                  <a href="">Notes</a>
+                  <a href="#">Notes</a>
                   <ul>
                     <li>
                       <a href="blog-home.html">Blog Home</a>

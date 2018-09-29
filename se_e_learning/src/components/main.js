@@ -113,11 +113,11 @@ class Main extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-lg-8 cta-left">
-                <h1>Not Yet Satisfied with our Trend?</h1>
+                <h1>Not Yet Satisfied with other tuitions and classes?</h1>
               </div>
               <div className="col-lg-4 cta-right">
                 <a className="primary-btn wh" href="#">
-                  view our blog
+                  Join Square Education
                 </a>
               </div>
             </div>
