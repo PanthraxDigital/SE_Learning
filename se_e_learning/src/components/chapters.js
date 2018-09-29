@@ -42,14 +42,9 @@ class Chapters extends React.Component {
           case 2:
             this.topicVal[index].innerRef.innerHTML = "";
             response.data.children.map((data3, ctr) => {
-              // this.topicVal[index].innerRef.innerHTML += `<div class=topicInfo>
-              // <a href="/topic/${data3.node_slug}"</a> ${ctr + 1}) ${
-              //   data3.title
-              // } </div>`;
-
-              let innerContent = `<a href="/topic/${data3.node_slug}">${
-                data3.title
-              }</a>`;
+              
+              let innerContent = `<a href="/topic/${data3.node_slug}"> ${ctr +
+                1}) ${data3.title}</a>`;
 
               this.topicVal[index].innerRef.innerHTML += `<div class=topicInfo>
               ${innerContent}
@@ -66,7 +61,7 @@ class Chapters extends React.Component {
   render() {
     if (this.state.chapterList !== []) {
       return (
-        <ul style={{ marginTop: "100px" }}>
+        <ul style={{ marginTop: "50px" }}>
           {this.state.chapterList.map((data, _index) => {
             return (
               <li key={data.key}>

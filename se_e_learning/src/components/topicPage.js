@@ -46,18 +46,3 @@ class TopicPage extends React.Component {
 
 export default TopicPage;
 
-{
-  /* <React.Fragment>
-<div id="layout" className="content pure-g">
-  <Chapters
-    chaptersUrl={this.state.chaptersUrl}
-    topicUrlCallback={this.getTopicUrlFromChapter}
-  />
-  <Topics
-    topicsUrl={this.state.topicsUrl}
-    contentUrlCallback={this.getContentUrlFromTopic}
-  />
-  <Contents contentUrl={this.state.contentUrl} />
-</div>
-</React.Fragment> */
-}

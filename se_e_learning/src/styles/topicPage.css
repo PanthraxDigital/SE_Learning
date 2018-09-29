@@ -220,6 +220,8 @@ a {
   .email-content {
     margin: 0px;
   }
+  
+  
 }
 
 /*
@@ -268,10 +270,9 @@ a {
 
   #main {
     position: fixed;
-    top: 15%;
+    top: 0%;
     right: 0;
     bottom: 0;
-    left: 150px;
     overflow: auto;
     width: auto; /* so that it's not 100% */
   }
@@ -297,7 +298,7 @@ a {
     position: static;
     padding: 0;
     text-align: left;
-    margin : 100px 50px 20px 50px;
+    margin : 50px 50px 20px 50px;
   }
 }
 
@@ -307,4 +308,10 @@ a {
   overflow: hidden;
   white-space: normal;
   width: 200px;
+}
+
+
+
+.topicContent{
+  text-align: left;
 }

@@ -33,7 +33,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 300;
-  line-height: 1.625em;
+  line-height: 0em;
   position: relative;
 }
 ol,
@@ -1730,6 +1730,7 @@ h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
+  height: 40px;
 }
 #header.header-scrolled {
   transition: all 0.5s;
@@ -4030,6 +4031,13 @@ dl.toggle.time-line:before {
 }
 .footer-area {
   background-color: #04091e;
+  position: fixed;
+  height: 30px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
 }
 .single-footer-widget h4 {
   color: #fff;
@@ -4228,11 +4236,11 @@ dl.toggle.time-line:before {
   position: absolute;
   left: 5%;
   right: 5%;
-  top: 5%;
+  top: 15%;
   bottom: 5%;
   margin: auto;
-  padding: 3%;
-  background: white;
+  padding-bottom: 3%;
+  background: black;
 }
 
 .topicInfo {
@@ -4240,5 +4248,8 @@ dl.toggle.time-line:before {
   padding: 5px;
   font-size: 18px;
   cursor: pointer;
-  
+}
+
+.topicInfo a {
+  color: black;
 }

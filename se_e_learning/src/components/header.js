@@ -4,36 +4,21 @@ import { Link } from "react-router-dom";
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.handleScroll = this.handleScroll.bind(this);
-  }
-
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-
-  handleScroll(event) {
-    // let scrollTop = window.scrollY;
-    // if (scrollTop > 100) {
-    //   document.getElementById("header").classList.add("header-scrolled");
-    // } else {
-    //   // document.getElementById("header").classList.remove("header-scrolled");
-    //   document.getElementById("header").classList.add("header-scrolled");
-    // }
   }
 
   render() {
     return (
       <header id="header" className="header-scrolled">
         <div className="container main-menu">
-          <div className="row align-items-center justify-content-between d-flex">
+          <div
+            className="row align-items-center justify-content-between d-flex"
+            style={{ lineHeight: "0" }}
+          >
             <div id="logo">
               <Link to="/">
-                {/* <img src="img/logo.png" alt="" title="" /> */}
-                <span>Squadl eLearning</span>
+                <span style={{ color: "#f7631b" }}>
+                  Square Education eLearning
+                </span>
               </Link>
             </div>
             <nav id="nav-menu-container">

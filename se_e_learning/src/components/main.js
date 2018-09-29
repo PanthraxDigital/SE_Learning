@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import _courseCategory from "../content/courseCategory.json";
 import CourseCategorySlider from "./courseCategorySlider";
-import Footer from "./footer";
+
 
 class Main extends React.Component {
   constructor(props) {
@@ -28,11 +28,7 @@ class Main extends React.Component {
                 <h1 className="text-uppercase">
                   We Ensure better education for a better world
                 </h1>
-                <p className="pt-10 pb-10">
-                  In the history of modern astronomy, there is probably no one
-                  greater leap forward than the building and launch of the space
-                  telescope known as the Hubble.
-                </p>
+                <p className="pt-10 pb-10" />
                 <a href="#" className="primary-btn text-uppercase">
                   Get Started
                 </a>
@@ -88,15 +84,20 @@ class Main extends React.Component {
             </div>
           </div>
         </section>
-        <section className="popular-course-area">
+        <section className="popular-course-area" style={{ height: "110px" }}>
           <div className="container">
             <div
               className="row d-flex justify-content-center"
-              style={{ marginTop: "100px" }}
+              style={{ marginTop: "30px" }}
             >
               <div className="menu-content pb-70 col-lg-8">
                 <div className="title text-center">
-                  <h1 className="mb-10">Popular Courses we offer</h1>
+                  <h2
+                    className="mb-10"
+                    style={{ marginBottom: "10px", color: "#f7631b" }}
+                  >
+                    Popular Courses
+                  </h2>
                   <p>There is a moment in the life of any aspiring.</p>
                 </div>
               </div>
@@ -122,7 +123,7 @@ class Main extends React.Component {
             </div>
           </div>
         </section>
-        <Footer />
+        
       </React.Fragment>
     );
   }

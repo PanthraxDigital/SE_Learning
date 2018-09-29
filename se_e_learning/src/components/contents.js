@@ -66,12 +66,7 @@ class Contents extends React.Component {
       return (
         <React.Fragment>
           <div id="main">
-            <div>
-              <button className="pure-button" onClick={this.navigateBack}>
-                Go Back
-              </button>
-            </div>
-            <ul>
+            <ul className="topicContent">
               {this.state.contentList.map((data, index) => {
                 console.log("value " + data.node_slug.indexOf("v/"));
                 if (data.node_slug.indexOf("v/") != -1) {
@@ -87,7 +82,7 @@ class Contents extends React.Component {
                     >
                       <div className="email-content">
                         <div className="email-content-body">
-                          <h3>{data.title}</h3>
+                          <h4 >{data.title}</h4>
                           <p>{data.description}</p>
                         </div>
                       </div>
@@ -99,6 +94,15 @@ class Contents extends React.Component {
               })}
               {showContentInPopup}
             </ul>
+            <div style={{ background: "red" }}>
+              <button
+                className="pure-button"
+                style={{ float: "left", margin: "10px" }}
+                onClick={this.navigateBack}
+              >
+                Back
+              </button>
+            </div>
           </div>
         </React.Fragment>
       );

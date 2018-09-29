@@ -34,9 +34,9 @@ class CourseCategorySlider extends React.Component {
       <div
         className="single-popular-carusel"
         key={data1.CategroyId}
-        style={{ marginTop: "50px" }}
+        style={{ marginTop: "50px", textAlign: "left" }}
       >
-        <h3>{data1.Category}</h3>
+        <h3 style={{ padding: "10px" }}>{data1.Category}</h3>
         <Slider {...settings}>
           {data1.Courses.map(data2 => (
             <div className="details">

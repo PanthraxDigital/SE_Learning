@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+import Header from "./header";
+import ReactDOM from 'react-dom';
 
 class PlayContent extends React.Component {
   constructor(props) {
@@ -9,18 +11,18 @@ class PlayContent extends React.Component {
     this.state = {
       videoContentUrl: ""
     };
-    console.log("play content url " + this.playContentUrl);
+   
   }
 
   closePopup(e) {
     this.props.closePopupCallback();
   }
   componentDidMount() {
+   
     let url = `http://www.khanacademy.org/api/v1/videos/${this.playContentUrl}`;
     axios
       .get(url)
       .then(response => {
-        //console.log("response " + JSON.stringify(response.data));
         this.setState({
           videoContentUrl: `https://www.youtube.com/embed/${
             response.data.youtube_id
@@ -38,13 +40,17 @@ class PlayContent extends React.Component {
         <div>
           <div className="popup">
             <div className="popup_inner">
-              <h1>{this.props.text}</h1>
-              <strong onClick={this.closePopup}>X</strong>
               <iframe
                 width="100%"
                 height="100%"
                 src={this.state.videoContentUrl}
               />
+              <button
+                onClick={this.closePopup}
+               style={{background:'white'}}
+              >
+                Close
+              </button>
             </div>
           </div>
         </div>
