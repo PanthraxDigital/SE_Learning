@@ -82,7 +82,8 @@ class Contents extends React.Component {
                     >
                       <div className="email-content">
                         <div className="email-content-body">
-                          <h4 >{data.title}</h4>
+                          <h4 style={{float:"left"}}>{data.title}</h4>
+                          <img src={require("../img/play_2.png")} style={{marginTop:"-10px"}}/>
                           <p>{data.description}</p>
                         </div>
                       </div>
