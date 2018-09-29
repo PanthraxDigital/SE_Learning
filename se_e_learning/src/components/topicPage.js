@@ -11,8 +11,9 @@ class TopicPage extends React.Component {
     super(props);
 
     this.state = {
-      chaptersUrl:
-        "http://www.khanacademy.org/api/v1/topic/in-in-grade-10-ncert",
+      chaptersUrl: `http://www.khanacademy.org/api/v1/topic${
+        this.props.location.pathname
+      }`,
       topicsUrl: "",
       contentUrl: ""
     };
@@ -35,21 +36,28 @@ class TopicPage extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
-        <div id="layout" className="content pure-g">
-          <Chapters
-            chaptersUrl={this.state.chaptersUrl}
-            topicUrlCallback={this.getTopicUrlFromChapter}
-          />
-          <Topics
-            topicsUrl={this.state.topicsUrl}
-            contentUrlCallback={this.getContentUrlFromTopic}
-          />
-          <Contents contentUrl={this.state.contentUrl} />
-        </div>
-      </React.Fragment>
+      <Chapters 
+        chaptersUrl={this.state.chaptersUrl}
+        topicUrlCallback={this.getTopicUrlFromChapter}
+      />
     );
   }
 }
 
 export default TopicPage;
+
+{
+  /* <React.Fragment>
+<div id="layout" className="content pure-g">
+  <Chapters
+    chaptersUrl={this.state.chaptersUrl}
+    topicUrlCallback={this.getTopicUrlFromChapter}
+  />
+  <Topics
+    topicsUrl={this.state.topicsUrl}
+    contentUrlCallback={this.getContentUrlFromTopic}
+  />
+  <Contents contentUrl={this.state.contentUrl} />
+</div>
+</React.Fragment> */
+}

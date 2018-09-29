@@ -1,30 +1,56 @@
 import React from "react";
 import axios from "axios";
+import Collapsible from "react-collapsible";
+import Topics from "./topics";
 
-// 0.The url will contain Subject & Class information on basis of which we can get the Chapters
-// 1. Fetch Chapter on basis of Subject ( Sub category ) + Class Selected ( Maths in Hindi for 10 std)
 class Chapters extends React.Component {
   constructor(props) {
     super(props);
-    this.url = props.chaptersUrl; // api/subcategory/course
+    this.url = props.chaptersUrl;
     this.state = {
-      chapterList: []
+      chapterList: [],
+      topicList: []
     };
+    this.topicVal = [];
+    this.topicUrl = "";
     this.getTopicByChapter = this.getTopicByChapter.bind(this);
     this.topicUrl = React.createRef();
   }
 
-  getTopicByChapter(e) {
-    this.props.topicUrlCallback(e.target.getAttribute("data"));
+  componentDidMount() {
+    this.fetchData(this.url, 1, 0);
   }
 
-  componentDidMount() {
+  getTopicByChapter(index) {
+    console.log(this.topicVal[index].innerRef);
+    this.topicUrl = `http://www.khanacademy.org/api/v1/topic/${
+      this.state.chapterList[index].node_slug
+    }`;
+    this.fetchData(this.topicUrl, 2, index);
+  }
+
+  fetchData(dataURL, callPriority, index) {
     axios
-      .get(this.url)
+      .get(dataURL)
       .then(response => {
-        this.setState({
-          chapterList: response.data.children
-        });
+        switch (callPriority) {
+          case 1:
+            this.setState({
+              chapterList: response.data.children
+            });
+            break;
+          case 2:
+            this.topicVal[index].innerRef.innerHTML = "";
+            response.data.children.map(data3 => {
+              this.topicVal[
+                index
+              ].innerRef.innerHTML += `<div class=topicInfo>${
+                data3.title
+              } </div>`;
+            });
+
+            break;
+        }
       })
       .catch(error => {
         console.log(error);
@@ -33,32 +59,21 @@ class Chapters extends React.Component {
   render() {
     if (this.state.chapterList !== []) {
       return (
-        <div id="nav" className="pure-u">
-          <a href="#" className="nav-menu-button">
-            Menu
-          </a>
-
-          <div className="nav-inner">
-            <div className="pure-menu">
-              <ul className="pure-menu-list">
-                {this.state.chapterList.map((data, index) => {
-                  return (
-                    <li className="pure-menu-item" key={data.key}>
-                      <span
-                        data={data.node_slug}
-                        className="pure-menu-link"
-                        ref={this.topicUrl}
-                        onClick={this.getTopicByChapter}
-                      >
-                        {data.title}
-                      </span>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          </div>
-        </div>
+        <ul style={{ marginTop: "100px" }}>
+          {this.state.chapterList.map((data, _index) => {
+            return (
+              <li key={data.key}>
+                <Collapsible
+                  data={data.node_slug}
+                  onOpening={this.getTopicByChapter.bind(this, _index)}
+                  trigger={data.title}
+                  tabIndex={_index}
+                  ref={ref => (this.topicVal[_index] = ref)}
+                />
+              </li>
+            );
+          })}
+        </ul>
       );
     }
   }

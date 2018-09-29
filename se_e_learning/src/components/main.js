@@ -15,14 +15,6 @@ class Main extends React.Component {
   }
 
   render() {
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1
-    };
-
     return (
       <React.Fragment>
         <section className="banner-area relative" id="home">
@@ -48,7 +40,7 @@ class Main extends React.Component {
             </div>
           </div>
         </section>
-        <section className="feature-area">
+        <section className="feature-area" style={{ display: "none" }}>
           <div className="container">
             <div className="row">
               <div className="col-lg-4">

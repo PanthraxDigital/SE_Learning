@@ -18,11 +18,11 @@ class Topics extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    
     if (nextProps.topicsUrl !== this.props.topicsUrl) {
       axios
         .get(`http://www.khanacademy.org/api/v1/topic/${nextProps.topicsUrl}`)
         .then(response => {
+
           this.setState({
             topicList: response.data.children
           });

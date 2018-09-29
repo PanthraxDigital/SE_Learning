@@ -1,26 +1,135 @@
 [
   {
-    "courseCategoryId": "1",
-    "categoryName": "Learn Maths",
-    "description": "This course describe the fundamentals of the Maths. So that students can learn easily",
-    "cost": "Free",
-    "link": "/learnMaths",
-    "imageUrl ": ""
+    "CategroyId": "1",
+    "Category": "Maths by Standard",
+    "Courses": [
+      {
+        "CourseId": "1.1",
+        "Name": "Class 5",
+        "Link": "/in-fifth-grade-math"
+      },
+      {
+        "CourseId": "1.2",
+        "Name": "Class 6",
+        "Link": "/in-in-class-6th-math-cbse"
+      },
+      {
+        "CourseId": "1.3",
+        "Name": "Class 7",
+        "Link": "/in-in-class-7th-math-cbse"
+      },
+      {
+        "CourseId": "1.4",
+        "Name": "Class 8",
+        "Link": "/in-in-class-8th-math-cbse"
+      },
+      {
+        "CourseId": "1.5",
+        "Name": "Class 9",
+        "Link": "/in-in-grade-9-ncert"
+      },
+      {
+        "CourseId": "1.6",
+        "Name": "Class 10",
+        "Link": "/in-in-grade-10-ncert"
+      },
+      {
+        "CourseId": "1.7",
+        "Name": "Class 11",
+        "Link": "/in-in-grade-11-ncert"
+      },
+      {
+        "CourseId": "1.8",
+        "Name": "Class 12",
+        "Link": "/in-in-grade-12-ncert"
+      }
+    ]
   },
   {
-    "courseCategoryId": "2",
-    "categoryName": "Learn Science",
-    "description": "This course describe the fundamentals of the Maths. So that students can learn easily",
-    "cost": "Free",
-    "link": "/learnScience",
-    "imageUrl ": ""
+    "CategoryId": 2,
+    "Category": "Maths in Hindi",
+    "Courses": [
+      {
+        "CourseId": "2.1",
+        "Name": "Class 7",
+        "Link": "/in-in-class-7th-math-cbse-hindi"
+      },
+      {
+        "CourseId": "2.2",
+        "Name": "Class 8",
+        "Link": "/in-in-class-8-math-india-hindi"
+      },
+      {
+        "CourseId": "2.3",
+        "Name": "Class 9",
+        "Link": "/in-in-class-9-math-india-hindi"
+      },
+      {
+        "CourseId": "2.4",
+        "Name": "Class 10",
+        "Link": "/in-in-class-10-math-cbse-hindi"
+      },
+      {
+        "CourseId": "2.5",
+        "Name": "Class 11",
+        "Link": "/in-in-class-11-math-cbse-hindi"
+      }
+    ]
   },
   {
-    "courseCategoryId": "3",
-    "categoryName": "Learn Grammar",
-    "description": "This course describe the fundamentals of the Maths. So that students can learn easily",
-    "cost": "Free",
-    "link": "/learnGrammar",
-    "imageUrl ": ""
+    "CategoryId": "3",
+    "Category": "General Maths",
+    "Courses": [
+      {
+        "CourseId": "3.1",
+        "Name": "Early Maths",
+        "Link": "/early-math"
+      },
+      {
+        "CourseId": "3.2",
+        "Name": "Arithmetic",
+        "Link": "/arithmetic"
+      },
+      {
+        "CourseId": "3.3",
+        "Name": "Pre-Algebra",
+        "Link": "/pre-algebra"
+      },
+      {
+        "CourseId": "3.4",
+        "Name": "Algebra",
+        "Link": "/algebra"
+      },
+      {
+        "CourseId": "3.5",
+        "Name": "Geometry",
+        "Link": "/geometry-home"
+      },
+      {
+        "CourseId": "3.6",
+        "Name": "Algebra 2",
+        "Link": "/algebra2"
+      },
+      {
+        "CourseId": "3.7",
+        "Name": "Trigonometry",
+        "Link": "/trigonometry"
+      },
+      {
+        "CourseId": "3.8",
+        "Name": "Statistics-Probability",
+        "Link": "/statistics-probability"
+      },
+      {
+        "CourseId": "3.9",
+        "Name": "Linear Algebra",
+        "Link": "/linear-algebra"
+      },
+      {
+        "CourseId": "3.10",
+        "Name": "Math for Fun and Glory",
+        "Link": "/math-for-fun-and-glory"
+      }
+    ]
   }
 ]
