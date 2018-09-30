@@ -27,21 +27,16 @@ class Header extends React.Component {
                   <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <a href="about.html">About</a>
+                  <a href="http://squareeducation.in/">About</a>
                 </li>
                 <li className="menu-has-children">
+                  <a href="http://online.squadl.com/">Question Bank</a>
+                 </li>
+                 <li className="menu-has-children">
                   <a href="#">Notes</a>
-                  <ul>
-                    <li>
-                      <a href="blog-home.html">Blog Home</a>
-                    </li>
-                    <li>
-                      <a href="blog-single.html">Blog Single</a>
-                    </li>
-                  </ul>
-                </li>
+                 </li>
                 <li>
-                  <a href="contact.html">Contact</a>
+                  <a href="http://squareeducation.in/centers/">Contact</a>
                 </li>
               </ul>
             </nav>

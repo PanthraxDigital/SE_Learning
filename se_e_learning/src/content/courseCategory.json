@@ -25,12 +25,12 @@
       },
       {
         "CourseId": "1.5",
-        "Name": "9 std",
+        "Name": "9th std",
         "Link": "/in-in-grade-9-ncert"
       },
       {
         "CourseId": "1.6",
-        "Name": "10 std",
+        "Name": "10th std",
         "Link": "/in-in-grade-10-ncert"
       },
       {
@@ -71,7 +71,7 @@
       },
       {
         "CourseId": "2.5",
-        "Name": "11 std",
+        "Name": "11th std",
         "Link": "/in-in-class-11-math-cbse-hindi"
       }
     ]
